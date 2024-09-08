@@ -2,7 +2,7 @@ const messageboardContainer = document.getElementById("messageList");
 
 async function getmessagelist() {
   const response = await fetch(
-    "http://localhost:5500/");
+    "https://lab4-itr1.onrender.com/");
   const data = await response.json();
   console.log(data);
 
@@ -26,7 +26,7 @@ async function handlePostMessages(event) {
   const data = Object.fromEntries(formData);
   console.log(data);
 
-  await fetch("http://localhost:5500/", {
+  await fetch("https://lab4-itr1.onrender.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
